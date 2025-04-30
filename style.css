@@ -36,3 +36,9 @@ pre, code {
   display: block;
   color: #eee;
 }
+
+.subtitle {
+  margin-top: -8px !important;
+  margin-bottom: 20px;        
+  font-size: 1.1em;
+}
