@@ -48,6 +48,6 @@ pre, code {
 }
 
 .school-logo {
-  height: 26px;                 /* adjust as needed */
+  height: 36px;                 /* adjust as needed */
   flex-shrink: 0;               /* prevents image from shrinking */
 }
