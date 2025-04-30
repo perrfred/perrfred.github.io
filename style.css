@@ -44,7 +44,7 @@ pre, code {
 }
 
 .school-logo {
-  height: 18px;
-  vertical-align: middle;
-  margin-right: 8px;
+  height: 12px;               /* reduced from 30+px to 12px */
+  vertical-align: text-bottom;
+  margin-left: 6px;           /* spacing from the text */
 }
