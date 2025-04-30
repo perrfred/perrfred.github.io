@@ -37,14 +37,14 @@ pre, code {
   color: #eee;
 }
 
-.subtitle {
-  margin-top: -8px !important;
-  margin-bottom: 20px;        
-  font-size: 1.1em;
+.subtitle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between text and logo */
+  margin-top: -10px; /* tighten spacing from the name */
+  margin-bottom: 20px;
 }
 
 .school-logo {
-  height: 80px;        
-  vertical-align: baseline;   
-  margin-left: 42px;           
+  height: 32px;
 }
