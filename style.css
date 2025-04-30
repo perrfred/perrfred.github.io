@@ -48,7 +48,7 @@ pre, code {
 }
 
 .school-logo {
-  height: 55px !important;       /* Force increase */
+  height: 68px !important;       /* Force increase */
   max-height: none !important;   /* Override any built-in limits */
   width: auto !important;        /* Don't stretch width */
   flex-shrink: 0;
