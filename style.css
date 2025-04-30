@@ -49,7 +49,7 @@ pre, code {
 
 .school-logo {
   width: auto;
-  height: 48px !important;       /* Force it bigger */
+  height: 56px !important;       /* Force it bigger */
   flex-shrink: 0;
   vertical-align: middle;
   display: inline-block;
