@@ -48,8 +48,9 @@ pre, code {
 }
 
 .school-logo {
-  width: auto;
-  height: 68px !important;       /* Force it bigger */
+  height: 55px !important;       /* Force increase */
+  max-height: none !important;   /* Override any built-in limits */
+  width: auto !important;        /* Don't stretch width */
   flex-shrink: 0;
   vertical-align: middle;
   display: inline-block;
