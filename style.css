@@ -54,5 +54,5 @@ pre, code {
   flex-shrink: 0;
   display: inline-block;
   position: relative;
-  top: -4px; /* lift it upward slightly */
+  top: -6px; /* lift it upward slightly */
 }
