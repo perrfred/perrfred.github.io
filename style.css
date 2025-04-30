@@ -48,6 +48,9 @@ pre, code {
 }
 
 .school-logo {
-  height: 48px;                 /* adjust as needed */
-  flex-shrink: 0;               /* prevents image from shrinking */
+  width: auto;
+  height: 48px !important;       /* Force it bigger */
+  flex-shrink: 0;
+  vertical-align: middle;
+  display: inline-block;
 }
