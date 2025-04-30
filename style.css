@@ -48,11 +48,11 @@ pre, code {
 }
 
 .school-logo {
-  height: 75px !important;
+  height: 77px !important;
   max-height: none !important;
   width: auto !important;
   flex-shrink: 0;
   display: inline-block;
   position: relative;
-  top: -6px; /* lift it upward slightly */
+  top: -15px; /* lift it upward slightly */
 }
