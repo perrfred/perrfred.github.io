@@ -1,0 +1,29 @@
+body {
+  background-color: #1e1e1e; /* dark grey */
+  color: #ffffff;            /* white text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+h1, h2, h3 {
+  color: #ffa500; /* orange for headings */
+}
+
+a {
+  color: #00bfff; /* sky blue links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre, code {
+  background-color: #2b2b2b;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+  display: block;
+  color: #eee;
+}
