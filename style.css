@@ -38,13 +38,16 @@ pre, code {
 }
 
 .subtitle-row {
-  display: flex;
+  display: inline-flex;         /* this keeps it inline with h1 */
   align-items: center;
-  gap: 12px; /* space between text and logo */
-  margin-top: -10px; /* tighten spacing from the name */
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: -8px;
   margin-bottom: 20px;
+  max-width: 100%;              /* prevents overflow */
 }
 
 .school-logo {
-  height: 32px;
+  height: 26px;                 /* adjust as needed */
+  flex-shrink: 0;               /* prevents image from shrinking */
 }
