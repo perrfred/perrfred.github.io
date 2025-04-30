@@ -1,5 +1,5 @@
 body {
-  background-color: #2a2a2a; /* dark grey */
+  background-color: #303030; /* charcoal grey */
   color: #ffffff;            /* white text */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -48,7 +48,7 @@ pre, code {
 }
 
 .school-logo {
-  height: 68px !important;       /* Force increase */
+  height: 76px !important;       /* Force increase */
   max-height: none !important;   /* Override any built-in limits */
   width: auto !important;        /* Don't stretch width */
   flex-shrink: 0;
