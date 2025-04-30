@@ -42,3 +42,9 @@ pre, code {
   margin-bottom: 20px;        
   font-size: 1.1em;
 }
+
+.school-logo {
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
