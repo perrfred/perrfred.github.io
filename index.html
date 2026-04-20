@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frédéric Perron - Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="content">
+    <div class="language-selector">
+      <span class="language-label">🌐 Language:</span>
+      <button id="lang-en">English</button>
+      <button id="lang-fr">Français</button>
+    </div>
+    <div class="header-section">
+      <h1 id="name">Frédéric Perron, B. Sc.</h1>
+      <div class="subtitle-row">
+        <div class="subtitle-text">
+          <p id="subtitle-en">Bachelor of Science, Cybersecurity, Polytechnique Montreal</p>
+          <p id="subtitle-fr">Baccalauréat ès Sciences, Cybersécurité, Polytechnique Montréal</p>
+          <div class="subtitle-divider"></div>
+          <p id="headline-tagline">Cybersecurity Readiness Consultant | NIST CSF & Audit Prep | Helping Startups Identify & Fix Security Gaps | Open to Work</p>
+        </div>
+        <img src="PolyLogoEN.png" alt="Polytechnique Montreal Logo" class="school-logo" />
+      </div>
+    </div>
+
+    <div class="tab-selector">
+      <button id="tab-work" class="tab-button active">Work / Projects</button>
+      <button id="tab-about" class="tab-button">About Me</button>
+      <button id="tab-services" class="tab-button">My Services</button>
+    </div>
+
+    <div id="work-section">
+    <div id="certifications-section" class="section-card">
+      <h2 id="certifications-title">🏆 Certifications / Certifications</h2>
+      <p id="certifications-text" style="display: none;">I plan on acquiring a few certifications during my career such as Security+, CISA, AZ-500 or AWS certs and others if necessary for a specific role.</p>
+      <ul id="certifications-list" style="display: none;">
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2 id="projects-title">🔐 Personal Projects / Projets Personnels</h2>
+      <ul id="projects-list" style="display: none;">
+        <li id="project1">SysAdmin Expert Roadmap created by ChatGPT</li>
+        <li id="project2">Home Network Segmentation for IoT & Security Devices</li>
+        <li id="project3">
+          <a href="https://github.com/perrfred/educational-targeted-pwgen"
+             target="_blank" rel="noopener noreferrer" id="project3-link">
+            Targeted Password List Generator for Educational and Testing purposes
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section-card">
+      <h2 id="assignments-title" class="expanded">🎓 School Assignments / Travaux d'école</h2>
+      <div id="assignments-list" style="display: none;">
+        <ul>
+          <li><a href="devoir14.pdf" target="_blank" id="assignment1">CI/CD Pipeline Resource Deployment — Terraform — Git — Azure</a></li>
+        </ul>
+        <h3 id="defensive-title">🛡 Defensive Security / Sécurité Défensive</h3>
+        <ul>
+          <li><a href="devoir1.pdf" target="_blank" id="assignment2">Hardening SELinux & Windows</a></li>
+          <li><a href="devoir2.pdf" target="_blank" id="assignment3">Attack Tree — Databases & Masks — Certificates & Encryption — Management with SQL Management Studio</a></li>
+          <li><a href="devoir3.pdf" target="_blank" id="assignment4">Threat Modeling and Risk Assessment in applicative security with STRIDE framework</a></li>
+          <li><a href="devoir4.pdf" target="_blank" id="assignment5">Elastic — Tcpdump — Wireshark — Tunnellisation ICMP et C&C</a></li>
+          <li><a href="devoir5.pdf" target="_blank" id="assignment6">File extraction/Extraction de fichiers — File decoding/Décodage de fichier — Sent Email Validation/Validation d'envoi d'e-mail — DKIM — SiLK — Suricata</a></li>
+          <li><a href="devoir6.pdf" target="_blank" id="assignment7">Honeypots/Pots de miel — Cyber Threat Hunting — RITA — Zeek — Windows Machine Investigation — Malware Analysis/Analyse de Maliciel — File Analysis/Analyse de Fichier</a></li>
+          <li><a href="devoir7.pdf" target="_blank" id="assignment8">MITRE ATT&CK — Purple Teaming — Kibana — PowerShell</a></li>
+          <li><a href="devoir12.pdf" target="_blank" id="assignment13">Analyse de trafic ICS — Ladder Logic — Investigation Linux — Shodan — Metasploit & ModbusPal</a></li>
+          <li><a href="devoir13.pdf" target="_blank" id="assignment14">Analyse PDF malicieux — Sandbox Cuckoo — IOC & YARA — Forensic & Redline</a></li>
+        </ul>
+        <h3 id="offensive-title">⚔ Offensive Security / Sécurité Offensive</h3>
+        <ul>
+          <li><a href="homework8.pdf" target="_blank" id="assignment9">Infrastructure Recon — Third-Party Service Recon</a></li>
+          <li><a href="homework9.pdf" target="_blank" id="assignment10">Metasploit — Password Cracking — Password Attacks — Responder & JohnTheRipper — Pivoting & Persistence</a></li>
+          <li><a href="homework10.pdf" target="_blank" id="assignment11">DLL Hijacking — PingCastle — Bloodhound — Local Privilege Escalation</a></li>
+          <li><a href="homework11.pdf" target="_blank" id="assignment12">SQL Injection — Authentication — Directory Traversal — OS Command Injection — Business Logic Vulnerabilities — Information Disclosure — Access Control — Server-side request forgery (SSRF) — XXE Injection — XSS (Cross-site scripting)</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div id="about-section" class="section-card" style="display: none;">
+      <h2 id="about-title" class="static-title">About Me / À propos</h2>
+      <div class="about-content">
+        <img src="FP.png" alt="Frédéric Perron" class="about-photo" />
+        <div class="about-text">
+          <p id="about-text-1"></p>
+          <p id="about-text-2"></p>
+          <p id="about-text-3"></p>
+          <p id="about-text-4"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="services-section" class="section-card" style="display: none;">
+      <h2 id="services-title" class="static-title">My Services / Mes Services</h2>
+      <div class="about-text">
+        <p id="services-text-1"></p>
+        <p id="services-text-2"></p>
+        <p id="services-text-3"></p>
+        <ul class="services-list">
+          <li id="services-bullet-1"></li>
+          <li id="services-bullet-2"></li>
+          <li id="services-bullet-3"></li>
+          <li id="services-bullet-4"></li>
+        </ul>
+        <p id="services-text-4"></p>
+        <p id="services-text-5"></p>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <p class="contact-info" id="contact">📫 Contact: <a href="mailto:fredericperron888@hotmail.com">fredericperron888@hotmail.com</a> |
+          <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/">LinkedIn</a>
+        </p>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Frédéric Perron - Cybersecurity Portfolio",
+        name: "Frédéric Perron, B.Sc.",
+        subtitle: "Bachelor of Science, Cybersecurity, Polytechnique Montreal",
+        projectsTitle: "🔐 Personal Projects",
+        project1: "SysAdmin Expert Roadmap created by ChatGPT",
+        project2: "Home Network Segmentation for IoT & Security Devices",
+        project3: "Targeted Password List Generator for Educational and Testing purposes",
+        assignmentsTitle: "🎓 School Assignments",
+        workTab: "Work / Projects",
+        aboutTab: "About Me",
+        servicesTab: "My Services",
+        aboutTitle: "About Me",
+        servicesTitle: "My Services",
+        headlineTagline: "Cybersecurity Readiness Consultant | NIST CSF & Audit Prep |\nHelping Startups Identify & Fix Security Gaps | Open to Work",
+        aboutText1: "I’m Frédéric Perron, a cybersecurity bachelor graduate from Polytechnique Montréal (2025) with a background in aviation security at Ottawa International Airport. I transitioned from physical/aviation security to cybersecurity to focus on protecting systems at scale—combining both my passions; security and technology/computers.",
+
+        aboutText2: "My experience covers network analysis, system hardening, threat modeling, vulnerability assessment, and both offensive and defensive security. I’ve worked with tools and environments across virtualized systems, cloud platforms, and databases, applying real-world attack scenarios to identify weaknesses and implement practical defenses.",
+
+        aboutText3: "I approach security from an adversarial mindset—understanding how systems break and designing them to be resilient. I’m also familiar with frameworks such as NIST CSF, MITRE ATT&CK, STRIDE, and COBIT, which I use to structure assessments and consulting work.",
+
+        aboutText4: "I’m particularly interested in helping startups and non-technical teams improve their security posture, prepare for audits, and build strong foundations before scaling. Refer to my \"Work / Projects\" and \"My Services\" sections to learn more about my works and consulting services.",
+
+        servicesText1: "I help startups and small organizations identify security gaps, prepare for audits, and implement practical safeguards without hiring a full-time security team.",
+        servicesText2: "My focus is on cybersecurity readiness — ensuring the fundamentals are in place before pursuing frameworks like NIST CSF or SOC 2, depending on your preferences.",
+        servicesText3: "I typically work on:",
+        servicesBullet1: "Security readiness & hygiene reviews",
+        servicesBullet2: "Framework gap analysis (NIST CSF, SOC 2 readiness)",
+        servicesBullet3: "Security policies and incident response basics",
+        servicesBullet4: "Phishing risk reduction and awareness",
+        servicesText4: "My approach is simple: clear, structured, and aligned with real business risk — not unnecessary complexity. Making everything understandable from a business view to non-technical business owners is also one of my priority during my services.",
+        servicesText5: "If you need help understanding your current security posture or preparing for audit requirements, feel free to reach out by email or on LinkedIn, even if your question is simple and seems basic, that's what my services are for.",
+        certificationsText: "I plan on acquiring a few certifications during my career such as Security+, CISA, AZ-500 or AWS certs and others if necessary for a specific role.",
+        defensiveTitle: "🛡 Defensive Security",
+        offensiveTitle: "⚔ Offensive Security",
+        certificationsTitle: "🏆 Certifications",
+        assignment1: "CI/CD Pipeline Resource Deployment — Terraform — Git — Azure",
+        assignment2: "Hardening SELinux & Windows",
+        assignment3: "Attack Tree — Databases & Masks — Certificates & Encryption — Management with SQL Management Studio",
+        assignment4: "Threat Modeling and Risk Assessment in applicative security with STRIDE framework",
+        assignment5: "Elastic — Tcpdump — Wireshark — ICMP Tunneling and C&C",
+        assignment6: "File extraction — File decoding — Sent Email Validation — DKIM — SiLK — Suricata",
+        assignment7: "Honeypots — Cyber Threat Hunting — RITA — Zeek — Windows Machine Investigation — Malware Analysis — File Analysis",
+        assignment8: "MITRE ATT&CK — Purple Teaming — Kibana — PowerShell",
+        assignment9: "Infrastructure Recon — Third-Party Service Recon",
+        assignment10: "Metasploit — Password Cracking — Password Attacks — Responder & JohnTheRipper — Pivoting & Persistence",
+        assignment11: "DLL Hijacking — PingCastle — Bloodhound — Local Privilege Escalation",
+        assignment12: "SQL Injection — Authentication — Directory Traversal — OS Command Injection — Business Logic Vulnerabilities — Information Disclosure — Access Control — Server-side request forgery (SSRF) — XXE Injection — XSS (Cross-site scripting)",
+        assignment13: "ICS Traffic Analysis — Ladder Logic — Linux Investigation — Shodan — Metasploit & ModbusPal",
+        assignment14: "Malicious PDF Analysis — Cuckoo Sandbox — IOC & YARA — Forensic & Redline",
+        contact: "📫 Contact: <a href=\"mailto:fredericperron888@hotmail.com\" style=\"color: #66ccff;\">fredericperron888@hotmail.com</a> | <a href=\"https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #66ccff;\">LinkedIn</a>"
+      },
+      fr: {
+        title: "Frédéric Perron - Portfolio Cybersécurité",
+        name: "Frédéric Perron, B. Sc.",
+        subtitle: "Baccalauréat ès Sciences, Cybersécurité, Polytechnique Montréal",
+        projectsTitle: "🔐 Projets Personnels",
+        project1: "Parcours/Roadmap expert en Administration Systèmes (Linux/Windows) créé par ChatGPT",
+        project2: "Segmentation du Réseau Domestique pour IoT et Appareils de Sécurité",
+        project3: "Générateur de Liste de Mots de Passe Ciblés",
+        assignmentsTitle: "🎓 Travaux d'École",
+        workTab: "Travail / Projets",
+        aboutTab: "À propos",
+        servicesTab: "Mes Services",
+        aboutTitle: "À propos",
+        servicesTitle: "Mes Services",
+        headlineTagline: "Consultant en cybersécurité | NIST CSF & préparation aux audits |\nAide les startups à identifier et corriger les failles de sécurité | Ouvert aux opportunités d’emploi",
+        aboutText1: "Je m'appelle Frédéric Perron, diplômé en cybersécurité de Polytechnique Montréal (2025), avec une expérience en sécurité aéroportuaire à l'aéroport international d'Ottawa. Je suis passé de la sécurité physique à la cybersécurité pour me concentrer sur la protection des systèmes à grande échelle, en associant discipline opérationnelle et expertise technique.",
+        aboutText2: "Mon expérience couvre l'analyse réseau, le durcissement des systèmes, la modélisation des menaces, l'évaluation des vulnérabilités et la sécurité offensive et défensive. J'ai travaillé avec des outils et des environnements sur des systèmes virtualisés, des plateformes cloud et des bases de données, en appliquant des scénarios d'attaque réels pour identifier les faiblesses et mettre en place des défenses pratiques.",
+        aboutText3: "J'aborde la sécurité avec un état d'esprit adverse : comprendre comment les systèmes se brisent et les concevoir pour qu'ils soient résilients. Je connais également des cadres comme NIST CSF, MITRE ATT&CK, STRIDE et COBIT, que j'utilise pour structurer les évaluations et les missions de conseil.",
+        aboutText4: "Je suis particulièrement intéressé à aider les startups et les équipes non techniques à améliorer leur posture de sécurité, se préparer aux audits et construire des bases solides avant de passer à l'échelle.",
+        servicesText1: "J'aide les startups et les petites organisations à identifier les lacunes de sécurité, à se préparer aux audits et à mettre en œuvre des protections pragmatiques sans embaucher une équipe de sécurité à temps plein.",
+        servicesText2: "Mon focus porte sur la préparation en cybersécurité — en veillant à ce que les fondamentaux soient en place avant d'envisager des cadres comme NIST CSF ou SOC 2, selon vos préférences.",
+        servicesText3: "Je travaille généralement sur :",
+        servicesBullet1: "Revues de préparation et d'hygiène de sécurité",
+        servicesBullet2: "Analyse des écarts de cadre (NIST CSF, préparation SOC 2)",
+        servicesBullet3: "Politiques de sécurité et bases de la réponse aux incidents",
+        servicesBullet4: "Réduction des risques de phishing et sensibilisation",
+        servicesText4: "Mon approche est simple : claire, structurée et alignée sur le risque réel des entreprises — pas de complexité inutile. Rendre tout compréhensible sous un angle business pour des dirigeants non techniques est également une de mes priorités.",
+        servicesText5: "Si vous avez besoin d'aide pour comprendre votre posture de sécurité actuelle ou préparer des exigences d'audit, n'hésitez pas à me contacter par email ou sur LinkedIn, même si votre question est simple et semble basique, c'est précisément pour cela que je propose ces services.",
+        certificationsText: "Je prévois d'obtenir plusieurs certifications au cours de ma carrière, telles que Security+, CISA, AZ-500 ou des certifications AWS et d'autres si nécessaire pour un rôle spécifique.",
+        defensiveTitle: "🛡 Sécurité Défensive",
+        offensiveTitle: "⚔ Sécurité Offensive",
+        certificationsTitle: "🏆 Certifications",
+        assignment1: "Déploiement de Ressources Pipeline CI/CD — Terraform — Git — Azure",
+        assignment2: "Durcissement SELinux & Windows",
+        assignment3: "Arbre d'Attaque — Bases de Données et Masques — Certificats et Chiffrement — Gestion avec SQL Management Studio",
+        assignment4: "Modélisation des Menaces et Évaluation des Risques en Sécurité Applicative avec le Cadre STRIDE",
+        assignment5: "Elastic — Tcpdump — Wireshark — Tunnellisation ICMP et C&C",
+        assignment6: "Extraction de fichiers — Décodage de fichier — Validation d'envoi d'e-mail — DKIM — SiLK — Suricata",
+        assignment7: "Pots de miel — Chasse aux Menaces Cyber (Threat hunting) — RITA — Zeek — Investigation Machine Windows — Analyse de Maliciel — Analyse de Fichier",
+        assignment8: "MITRE ATT&CK — Purple Teaming — Kibana — PowerShell",
+        assignment9: "Reconnaissance d'Infrastructure — Reconnaissance de Services Tiers",
+        assignment10: "Metasploit — Craquage de Mots de Passe — Attaques de Mots de Passe — Responder & JohnTheRipper — Pivotement & Persistance",
+        assignment11: "Détournement DLL — PingCastle — Bloodhound — Escalade de Privilèges Locale",
+        assignment12: "Injection SQL — Authentification — Traversée de Répertoire — Injection de Commande OS — Vulnérabilités Logique Métier — Divulgation d'Informations — Contrôle d'Accès — Falsification de Requête Côté Serveur (SSRF) — Injection XXE — XSS (Scripting Cross-Site)",
+        assignment13: "Analyse de trafic ICS — Échelle Logique — Investigation Linux — Shodan — Metasploit & ModbusPal",
+        assignment14: "Analyse PDF malicieux — Sandbox Cuckoo — IOC & YARA — Forensic & Redline",
+        contact: "📫 Contact : <a href=\"mailto:fredericperron888@hotmail.com\" style=\"color: #66ccff;\">fredericperron888@hotmail.com</a> | <a href=\"https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #66ccff;\">LinkedIn</a>"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.title = translations[lang].title;
+      document.getElementById('name').textContent = translations[lang].name;
+      document.getElementById('subtitle-en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('subtitle-fr').style.display = lang === 'fr' ? 'block' : 'none';
+      
+      // Switch logo based on language
+      const logoImg = document.querySelector('.school-logo');
+      logoImg.src = lang === 'en' ? 'PolyLogoEN.png' : 'PolyLogoFR.png';
+      
+      document.getElementById('projects-title').textContent = translations[lang].projectsTitle;
+      document.getElementById('project1').textContent = translations[lang].project1;
+      document.getElementById('project2').textContent = translations[lang].project2;
+      document.getElementById('project3-link').textContent = translations[lang].project3;
+      document.getElementById('headline-tagline').textContent = translations[lang].headlineTagline;
+      document.getElementById('assignments-title').textContent = translations[lang].assignmentsTitle;
+      document.getElementById('certifications-title').textContent = translations[lang].certificationsTitle;
+      document.getElementById('certifications-text').textContent = translations[lang].certificationsText;
+      document.getElementById('assignment1').textContent = translations[lang].assignment1;
+      document.getElementById('assignment2').textContent = translations[lang].assignment2;
+      document.getElementById('assignment3').textContent = translations[lang].assignment3;
+      document.getElementById('assignment4').textContent = translations[lang].assignment4;
+      document.getElementById('assignment5').textContent = translations[lang].assignment5;
+      document.getElementById('assignment6').textContent = translations[lang].assignment6;
+      document.getElementById('assignment7').textContent = translations[lang].assignment7;
+      document.getElementById('assignment8').textContent = translations[lang].assignment8;
+      document.getElementById('assignment9').textContent = translations[lang].assignment9;
+      document.getElementById('assignment10').textContent = translations[lang].assignment10;
+      document.getElementById('assignment11').textContent = translations[lang].assignment11;
+      document.getElementById('assignment12').textContent = translations[lang].assignment12;
+      document.getElementById('assignment13').textContent = translations[lang].assignment13;
+      document.getElementById('assignment14').textContent = translations[lang].assignment14;
+      document.getElementById('defensive-title').textContent = translations[lang].defensiveTitle;
+      document.getElementById('offensive-title').textContent = translations[lang].offensiveTitle;
+      document.getElementById('tab-work').textContent = translations[lang].workTab;
+      document.getElementById('tab-about').textContent = translations[lang].aboutTab;
+      document.getElementById('tab-services').textContent = translations[lang].servicesTab;
+      document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+      document.getElementById('about-text-1').textContent = translations[lang].aboutText1;
+      document.getElementById('about-text-2').textContent = translations[lang].aboutText2;
+      document.getElementById('about-text-3').textContent = translations[lang].aboutText3;
+      document.getElementById('about-text-4').textContent = translations[lang].aboutText4;
+      document.getElementById('services-title').textContent = translations[lang].servicesTitle;
+      document.getElementById('services-text-1').textContent = translations[lang].servicesText1;
+      document.getElementById('services-text-2').textContent = translations[lang].servicesText2;
+      document.getElementById('services-text-3').textContent = translations[lang].servicesText3;
+      document.getElementById('services-bullet-1').textContent = translations[lang].servicesBullet1;
+      document.getElementById('services-bullet-2').textContent = translations[lang].servicesBullet2;
+      document.getElementById('services-bullet-3').textContent = translations[lang].servicesBullet3;
+      document.getElementById('services-bullet-4').textContent = translations[lang].servicesBullet4;
+      document.getElementById('services-text-4').textContent = translations[lang].servicesText4;
+      document.getElementById('services-text-5').textContent = translations[lang].servicesText5;
+      document.getElementById('contact').innerHTML = translations[lang].contact;
+
+      // Update assignment links based on language
+      const assignmentMappings = {
+        'assignment1': 'devoir14',
+        'assignment2': 'devoir1',
+        'assignment3': 'devoir2',
+        'assignment4': 'devoir3',
+        'assignment5': 'devoir4',
+        'assignment6': 'devoir5',
+        'assignment7': 'devoir6',
+        'assignment8': 'devoir7',
+        'assignment9': 'devoir8',
+        'assignment10': 'devoir9',
+        'assignment11': 'devoir10',
+        'assignment12': 'devoir11',
+        'assignment13': 'devoir12',
+        'assignment14': 'devoir13'
+      };
+      for (const [id, base] of Object.entries(assignmentMappings)) {
+        document.getElementById(id).href = `${base}%20${lang}.pdf`;
+      }
+    }
+
+    document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('lang-fr').addEventListener('click', () => setLanguage('fr'));
+
+    // Default to English
+    setLanguage('en');
+
+    const tabWork = document.getElementById('tab-work');
+    const tabAbout = document.getElementById('tab-about');
+    const tabServices = document.getElementById('tab-services');
+    const workSection = document.getElementById('work-section');
+    const aboutSection = document.getElementById('about-section');
+    const servicesSection = document.getElementById('services-section');
+
+    function showWork() {
+      workSection.style.display = 'block';
+      aboutSection.style.display = 'none';
+      servicesSection.style.display = 'none';
+      tabWork.classList.add('active');
+      tabAbout.classList.remove('active');
+      tabServices.classList.remove('active');
+    }
+
+    function showAbout() {
+      workSection.style.display = 'none';
+      aboutSection.style.display = 'block';
+      servicesSection.style.display = 'none';
+      tabWork.classList.remove('active');
+      tabAbout.classList.add('active');
+      tabServices.classList.remove('active');
+    }
+
+    function showServices() {
+      workSection.style.display = 'none';
+      aboutSection.style.display = 'none';
+      servicesSection.style.display = 'block';
+      tabWork.classList.remove('active');
+      tabAbout.classList.remove('active');
+      tabServices.classList.add('active');
+    }
+
+    tabWork.addEventListener('click', showWork);
+    tabAbout.addEventListener('click', showAbout);
+    tabServices.addEventListener('click', showServices);
+
+    showWork();
+
+    // Set initial display states
+    document.getElementById('assignments-list').style.display = 'block';
+
+    // Add dropdown functionality
+    document.getElementById('projects-title').addEventListener('click', function() {
+      var list = document.getElementById('projects-list');
+      var title = document.getElementById('projects-title');
+      if (list.style.display === 'none') {
+        list.style.display = 'block';
+        title.classList.add('expanded');
+      } else {
+        list.style.display = 'none';
+        title.classList.remove('expanded');
+      }
+    });
+
+    document.getElementById('assignments-title').addEventListener('click', function() {
+      var list = document.getElementById('assignments-list');
+      var title = document.getElementById('assignments-title');
+      if (list.style.display === 'none') {
+        list.style.display = 'block';
+        title.classList.add('expanded');
+      } else {
+        list.style.display = 'none';
+        title.classList.remove('expanded');
+      }
+    });
+
+    document.getElementById('certifications-title').addEventListener('click', function() {
+      var list = document.getElementById('certifications-list');
+      var text = document.getElementById('certifications-text');
+      var title = document.getElementById('certifications-title');
+      if (list.style.display === 'none') {
+        list.style.display = 'block';
+        text.style.display = 'block';
+        title.classList.add('expanded');
+      } else {
+        list.style.display = 'none';
+        text.style.display = 'none';
+        title.classList.remove('expanded');
+      }
+    });
+  </script>
+</body>
+</html>
