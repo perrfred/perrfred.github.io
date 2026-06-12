@@ -28,72 +28,91 @@
 
     <div class="tab-selector">
       <button id="tab-about" class="tab-button active" onclick="showSection('about')">About Me</button>
-      <button id="tab-projects" class="tab-button" onclick="showSection('projects')">Projects</button>
-      <button id="tab-labs" class="tab-button" onclick="showSection('labs')">Labs</button>
-      <button id="tab-blogs" class="tab-button" onclick="showSection('blogs')">Blogs</button>
+      <button id="tab-portfolio" class="tab-button" onclick="showSection('portfolio')">Portfolio</button>
       <button id="tab-certifications" class="tab-button" onclick="showSection('certifications')">Certifications</button>
+      <button id="tab-blogs" class="tab-button" onclick="showSection('blogs')">Blogs</button>
       <button id="tab-services" class="tab-button" onclick="showSection('services')">My Services</button>
+      <button id="tab-contact" class="tab-button" onclick="showSection('contact')">Contact</button>
     </div>
 
-    <div id="projects-section" style="display: none;">
-
+    <div id="portfolio-section" style="display: none;">
       <div class="section-card">
-        <h2 id="projects-title">🔐 Personal Projects / Projets Personnels</h2>
-        <ul id="projects-list" style="display: none;">
-          <li id="project1">SysAdmin Expert Roadmap (Linux & Windows) created by ChatGPT</li>
-          <li id="project2">Home Network Segmentation for IoT & Security Devices</li>
-          <li id="project3">
-            <a href="https://github.com/perrfred/educational-targeted-pwgen"
-               target="_blank" rel="noopener noreferrer" id="project3-link">
-              Targeted Password List Generator for Educational and Testing purposes
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="section-card">
-        <h2 id="assignments-title" class="expanded">🎓 School Assignments / Travaux d'école</h2>
-        <div id="assignments-list" style="display: block;">
-          <ul>
-            <li><a href="devoir14.pdf" target="_blank" id="assignment1">CI/CD Pipeline Resource Deployment — Terraform — Git — Azure</a></li>
-          </ul>
-          <h3 id="defensive-title">🛡 Defensive Security / Sécurité Défensive</h3>
-          <ul>
-            <li><a href="devoir1.pdf" target="_blank" id="assignment2">Hardening SELinux & Windows</a></li>
-            <li><a href="devoir2.pdf" target="_blank" id="assignment3">Attack Tree — Databases & Masks — Certificates & Encryption — Management with SQL Management Studio</a></li>
-            <li><a href="devoir3.pdf" target="_blank" id="assignment4">Threat Modeling and Risk Assessment in applicative security with STRIDE framework</a></li>
-            <li><a href="devoir4.pdf" target="_blank" id="assignment5">Elastic — Tcpdump — Wireshark — Tunnellisation ICMP et C&C</a></li>
-            <li><a href="devoir5.pdf" target="_blank" id="assignment6">File extraction/Extraction de fichiers — File decoding/Décodage de fichier — Sent Email Validation/Validation d'envoi d'e-mail — DKIM — SiLK — Suricata</a></li>
-            <li><a href="devoir6.pdf" target="_blank" id="assignment7">Honeypots/Pots de miel — Cyber Threat Hunting — RITA — Zeek — Windows Machine Investigation — Malware Analysis/Analyse de Maliciel — File Analysis/Analyse de Fichier</a></li>
-            <li><a href="devoir7.pdf" target="_blank" id="assignment8">MITRE ATT&CK — Purple Teaming — Kibana — PowerShell</a></li>
-            <li><a href="devoir12.pdf" target="_blank" id="assignment13">Analyse de trafic ICS — Ladder Logic — Investigation Linux — Shodan — Metasploit & ModbusPal</a></li>
-            <li><a href="devoir13.pdf" target="_blank" id="assignment14">Analyse PDF malicieux — Sandbox Cuckoo — IOC & YARA — Forensic & Redline</a></li>
-          </ul>
-          <h3 id="offensive-title">⚔ Offensive Security / Sécurité Offensive</h3>
-          <ul>
-            <li><a href="homework8.pdf" target="_blank" id="assignment9">Infrastructure Recon — Third-Party Service Recon</a></li>
-            <li><a href="homework9.pdf" target="_blank" id="assignment10">Metasploit — Password Cracking — Password Attacks — Responder & JohnTheRipper — Pivoting & Persistence</a></li>
-            <li><a href="homework10.pdf" target="_blank" id="assignment11">DLL Hijacking — PingCastle — Bloodhound — Local Privilege Escalation</a></li>
-            <li><a href="homework11.pdf" target="_blank" id="assignment12">SQL Injection — Authentication — Directory Traversal — OS Command Injection — Business Logic Vulnerabilities — Information Disclosure — Access Control — Server-side request forgery (SSRF) — XXE Injection — XSS (Cross-site scripting)</a></li>
-          </ul>
+        <h2 id="portfolio-title">Portfolio</h2>
+        <div class="portfolio-subsection">
+              <div class="section-card no-lift">
+            <h3 id="projects-title" class="toggle-title expanded" onclick="toggleSection('projects-list', this)">
+              <button type="button" class="toggle-arrow expanded" aria-expanded="true" onclick="event.stopPropagation(); toggleSection('projects-list', this)">▾</button>
+              <span id="projects-label" class="toggle-label">Projects / Projets Personnels</span>
+            </h3>
+            <ul id="projects-list" style="display: block;">
+              <li id="project2">Home Network Segmentation for IoT & Security Devices</li>
+              <li id="project3">
+                <a href="https://github.com/perrfred/educational-targeted-pwgen"
+                   target="_blank" rel="noopener noreferrer" id="project3-link">
+                  Targeted Password List Generator for Educational and Testing purposes
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="section-card">
+            <h3 id="labs-title" class="toggle-title" onclick="toggleSection('labs-content', this)">
+              <button type="button" class="toggle-arrow" aria-expanded="false" onclick="event.stopPropagation(); toggleSection('labs-content', this)">▸</button>
+              <span id="labs-label" class="toggle-label">Labs</span>
+            </h3>
+            <div id="labs-content" style="display: none;"></div>
+          </div>
+          <div class="section-card">
+            <h3 id="assignments-title" class="toggle-title expanded" onclick="toggleSection('assignments-list', this)">
+              <button type="button" class="toggle-arrow expanded" aria-expanded="true" onclick="event.stopPropagation(); toggleSection('assignments-list', this)">▾</button>
+              <span id="assignments-label" class="toggle-label">School Assignments / Travaux d'école</span>
+            </h3>
+            <div id="assignments-list" style="display: block;">
+              <ul>
+                <li><a href="devoir14.pdf" target="_blank" id="assignment1">CI/CD Pipeline Resource Deployment — Terraform — Git — Azure</a></li>
+              </ul>
+              <h3 id="defensive-title">🛡 Defensive Security / Sécurité Défensive</h3>
+              <ul>
+                <li><a href="devoir1.pdf" target="_blank" id="assignment2">Hardening SELinux & Windows</a></li>
+                <li><a href="devoir2.pdf" target="_blank" id="assignment3">Attack Tree — Databases & Masks — Certificates & Encryption — Management with SQL Management Studio</a></li>
+                <li><a href="devoir3.pdf" target="_blank" id="assignment4">Threat Modeling and Risk Assessment in applicative security with STRIDE framework</a></li>
+                <li><a href="devoir4.pdf" target="_blank" id="assignment5">Elastic — Tcpdump — Wireshark — Tunnellisation ICMP et C&C</a></li>
+                <li><a href="devoir5.pdf" target="_blank" id="assignment6">File extraction/Extraction de fichiers — File decoding/Décodage de fichier — Sent Email Validation/Validation d'envoi d'e-mail — DKIM — SiLK — Suricata</a></li>
+                <li><a href="devoir6.pdf" target="_blank" id="assignment7">Honeypots/Pots de miel — Cyber Threat Hunting — RITA — Zeek — Windows Machine Investigation — Malware Analysis/Analyse de Maliciel — File Analysis/Analyse de Fichier</a></li>
+                <li><a href="devoir7.pdf" target="_blank" id="assignment8">MITRE ATT&CK — Purple Teaming — Kibana — PowerShell</a></li>
+                <li><a href="devoir12.pdf" target="_blank" id="assignment13">Analyse de trafic ICS — Ladder Logic — Investigation Linux — Shodan — Metasploit & ModbusPal</a></li>
+                <li><a href="devoir13.pdf" target="_blank" id="assignment14">Analyse PDF malicieux — Sandbox Cuckoo — IOC & YARA — Forensic & Redline</a></li>
+              </ul>
+              <h3 id="offensive-title">⚔ Offensive Security / Sécurité Offensive</h3>
+              <ul>
+                <li><a href="homework8.pdf" target="_blank" id="assignment9">Infrastructure Recon — Third-Party Service Recon</a></li>
+                <li><a href="homework9.pdf" target="_blank" id="assignment10">Metasploit — Password Cracking — Password Attacks — Responder & JohnTheRipper — Pivoting & Persistence</a></li>
+                <li><a href="homework10.pdf" target="_blank" id="assignment11">DLL Hijacking — PingCastle — Bloodhound — Local Privilege Escalation</a></li>
+                <li><a href="homework11.pdf" target="_blank" id="assignment12">SQL Injection — Authentication — Directory Traversal — OS Command Injection — Business Logic Vulnerabilities — Information Disclosure — Access Control — Server-side request forgery (SSRF) — XXE Injection — XSS (Cross-site scripting)</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Insert Labs and Blogs sections here (after Projects) -->
-    <div id="labs-section" class="section-card" style="display: none;">
-      <!-- Labs section intentionally left empty -->
+    <div id="certifications-section" class="section-card" style="display: none;">
+      <h2 id="certifications-title" class="static-title">Certifications</h2>
+      <div class="about-text">
+        <p id="certifications-text">During my career, I plan on acquiring a few certifications like CCNA, Security+, CISA, AZ-500, AWS certifications or any other certification I could need for a specific role.</p>
+      </div>
     </div>
 
     <div id="blogs-section" class="section-card" style="display: none;">
-      <!-- Blogs section intentionally left empty -->
+      <ul class="services-list">
+        <li>SysAdmin Expert Roadmap (Linux & Windows) created by ChatGPT</li>
+      </ul>
     </div>
 
-    <div id="certifications-section" class="section-card" style="display: none;">
-      <h2 id="certifications-title" class="static-title">🏆 Certifications / Certifications</h2>
-      <p id="certifications-text" style="display: block;">During my career, I plan on acquiring a few certifications like CCNA, Security+, CISA, AZ-500, AWS certifications or any other certification I could need for a specific role.</p>
-      <ul id="certifications-list" style="display: none;">
-      </ul>
+    <div id="contact-section" class="section-card" style="display: none;">
+      <h2 id="contact-title" class="static-title">Contact</h2>
+      <div class="about-text">
+        <p id="contact-info"></p>
+      </div>
     </div>
 
     <div id="about-section" class="section-card" style="display: none;">
@@ -115,39 +134,114 @@
       <h2 id="services-title" class="static-title">My Services / Mes Services</h2>
       <div class="about-text">
         <div class="services-en" style="display: block;">
-          <p>I help startups and small organizations identify security gaps, prepare for audits, and implement practical safeguards without hiring a full-time security team.</p>
-          <p>My focus is on cybersecurity readiness — ensuring the fundamentals are in place before pursuing frameworks like NIST CSF or SOC 2, depending on your preferences.</p>
-          <p>I typically work on:</p>
+          <h3>Who I Work With</h3>
           <ul class="services-list">
-            <li>Security readiness & hygiene reviews</li>
-            <li>Framework gap analysis (NIST CSF, SOC 2 readiness)</li>
-            <li>Security policies and incident response basics</li>
-            <li>Phishing risk reduction and awareness</li>
+            <li>Individuals</li>
+            <li>Startups</li>
+            <li>Small Organizations</li>
           </ul>
-          <p>My approach is simple: clear, structured, and aligned with real business risk — not unnecessary complexity. Making everything understandable from a business view to non-technical business owners is also one of my priorities.</p>
-          <p>If you need help understanding your current security posture or preparing for audit requirements, feel free to reach out by email or on LinkedIn, even if your question is simple and seems basic, that's what my services are for.</p>
+
+          <h3>Cybersecurity Assessments</h3>
+          <ul class="services-list">
+            <li>Security posture reviews</li>
+            <li>Security hygiene assessments</li>
+            <li>Risk identification and recommendations</li>
+            <li>Security readiness evaluations</li>
+          </ul>
+
+          <h3>Compliance & Framework Readiness</h3>
+          <ul class="services-list">
+            <li>NIST CSF gap analysis</li>
+            <li>SOC 2 readiness assessments</li>
+            <li>Audit preparation guidance</li>
+            <li>Security documentation reviews</li>
+          </ul>
+
+          <h3>Security Policies & Incident Response Plan</h3>
+          <ul class="services-list">
+            <li>Security policy development</li>
+            <li>Incident response fundamentals</li>
+            <li>Basic security governance guidance</li>
+            <li>Security process recommendations</li>
+          </ul>
+
+          <h3>Security Awareness</h3>
+          <ul class="services-list">
+            <li>Phishing risk reduction</li>
+            <li>Security awareness guidance</li>
+            <li>Cybersecurity best practices</li>
+            <li>End-user security education</li>
+          </ul>
+
+          <h3>Individual Security Consulting</h3>
+          <ul class="services-list">
+            <li>Account security reviews</li>
+            <li>Device security guidance</li>
+            <li>Personal cybersecurity recommendations</li>
+            <li>Online privacy and security best practices</li>
+          </ul>
+
+          <p>I help individuals, startups, and small organizations better understand their cybersecurity risks, improve their security posture, and prepare for compliance or audit requirements.</p>
+          <p>My approach is practical, straightforward, and focused on real-world risk. I believe cybersecurity should be understandable and actionable, whether you're a business owner, manager, or individual looking to strengthen your security.</p>
+          <p>If you have any questions or want more information about my services, please feel free to contact me. I will be happy to help you.</p>
+          <p>Contact: <a href="mailto:fredericperron888@hotmail.com">fredericperron888@hotmail.com</a> | <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
         <div class="services-fr" style="display: none;">
-          <p>J'aide les startups et les petites organisations à identifier les lacunes de sécurité, à se préparer aux audits et à mettre en œuvre des protections pragmatiques sans embaucher une équipe de sécurité à temps plein.</p>
-          <p>Mon focus porte sur la préparation en cybersécurité — en veillant à ce que les fondamentaux soient en place avant d'envisager des cadres comme NIST CSF ou SOC 2, selon vos préférences.</p>
-          <p>Je travaille généralement sur :</p>
+          <h3>Clientèles desservies</h3>
           <ul class="services-list">
-            <li>Revues de préparation et d'hygiène de sécurité</li>
-            <li>Analyse des écarts de cadre (NIST CSF, préparation SOC 2)</li>
-            <li>Politiques de sécurité et bases de la réponse aux incidents</li>
-            <li>Réduction des risques de phishing et sensibilisation</li>
+            <li>Particuliers</li>
+            <li>Startups</li>
+            <li>Petites organisations</li>
           </ul>
-          <p>Mon approche est simple : claire, structurée et alignée sur le risque réel des entreprises — pas de complexité inutile. Rendre tout compréhensible sous un angle business pour des dirigeants non techniques est également une de mes priorités.</p>
-          <p>Si vous avez besoin d'aide pour comprendre votre posture de sécurité actuelle ou préparer des exigences d'audit, n'hésitez pas à me contacter par email ou sur LinkedIn, même si votre question est simple et semble basique, c'est précisément pour cela que je propose ces services.</p>
+
+          <h3>Évaluations en cybersécurité</h3>
+          <ul class="services-list">
+            <li>Évaluation de la posture de sécurité</li>
+            <li>Revue des bonnes pratiques de sécurité</li>
+            <li>Identification des risques et recommandations</li>
+            <li>Évaluation du niveau de préparation en cybersécurité</li>
+          </ul>
+
+          <h3>Conformité et préparation aux cadres de référence</h3>
+          <ul class="services-list">
+            <li>Analyse des écarts selon le cadre NIST CSF</li>
+            <li>Préparation à une démarche SOC 2</li>
+            <li>Accompagnement en vue d'audits</li>
+            <li>Révision de la documentation de sécurité</li>
+          </ul>
+
+          <h3>Politiques de sécurité et plan de réponse aux incidents</h3>
+          <ul class="services-list">
+            <li>Élaboration de politiques de sécurité</li>
+            <li>Mise en place des bases de la gestion des incidents</li>
+            <li>Recommandations en gouvernance de sécurité</li>
+            <li>Amélioration des processus de sécurité</li>
+          </ul>
+
+          <h3>Sensibilisation à la cybersécurité</h3>
+          <ul class="services-list">
+            <li>Réduction des risques liés à l'hameçonnage</li>
+            <li>Sensibilisation des utilisateurs</li>
+            <li>Promotion des bonnes pratiques de sécurité</li>
+            <li>Formation et accompagnement des employés</li>
+          </ul>
+
+          <h3>Accompagnement des particuliers</h3>
+          <ul class="services-list">
+            <li>Révision de la sécurité des comptes en ligne</li>
+            <li>Recommandations pour la sécurité des appareils</li>
+            <li>Conseils en cybersécurité personnelle</li>
+            <li>Protection de la vie privée et des données personnelles</li>
+          </ul>
+
+          <p>J'aide les particuliers, les startups et les petites organisations à mieux comprendre leurs risques en cybersécurité, à renforcer leurs pratiques de sécurité et à se préparer aux exigences de conformité ou d'audit.</p>
+          <p>Mon approche est simple et pragmatique : offrir des recommandations claires, adaptées à la réalité de chaque client et axées sur les risques réels. Mon objectif est de rendre la cybersécurité accessible et compréhensible, autant pour les propriétaires d'entreprise et les gestionnaires que pour les particuliers.</p>
+          <p>Pour toute question ou pour obtenir plus d'information sur mes services, n'hésitez pas à me contacter. Il me fera plaisir de vous aider.</p>
+          <p>Contact : <a href="mailto:fredericperron888@hotmail.com">fredericperron888@hotmail.com</a> | <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
       </div>
     </div>
 
-    <div class="contact-section">
-      <p class="contact-info" id="contact">📫 Contact: <a href="mailto:fredericperron888@hotmail.com">fredericperron888@hotmail.com</a> |
-          <a href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/">LinkedIn</a>
-        </p>
-    </div>
   </div>
 
   <script>
@@ -156,13 +250,16 @@
         title: "Frédéric Perron - Cybersecurity Portfolio",
         name: "Frédéric Perron, B.Sc.",
         subtitle: "Bachelor of Science, Cybersecurity, Polytechnique Montreal",
-        projectsTitle: "🔐 Personal Projects",
+        projectsTitle: "Projects",
         project1: "SysAdmin Expert Roadmap (Linux & Windows) created by ChatGPT",
         project2: "Home Network Segmentation for IoT & Security Devices",
         project3: "Targeted Password List Generator for Educational and Testing purposes",
-        assignmentsTitle: "🎓 School Assignments",
+        portfolioTitle: "Portfolio",
+        assignmentsTitle: "School Assignments",
         projectsTab: "Projects",
+        labsTitle: "Labs",
         labsTab: "Labs",
+        portfolioTab: "Portfolio",
         blogsTab: "Blogs",
         aboutTab: "About Me",
         servicesTab: "My Services",
@@ -189,8 +286,6 @@
         certificationsText: "During my career, I plan on acquiring a few certifications like CCNA, Security+, CISA, AZ-500, AWS certifications or any other certification I could need for a specific role.",
         certificationsTab: "Certifications",
         blogsTitle: "📝 Blogs / Articles",
-        labsTitle: "🧪 Laboratoires",
-        labsTitle: "🧪 Labs",
         blog1: "How I improved home network segmentation",
         blog2: "Intro to NIST CSF for Startups",
         labsTab: "Labs",
@@ -211,42 +306,47 @@
         assignment12: "SQL Injection — Authentication — Directory Traversal — OS Command Injection — Business Logic Vulnerabilities — Information Disclosure — Access Control — Server-side request forgery (SSRF) — XXE Injection — XSS (Cross-site scripting)",
         assignment13: "ICS Traffic Analysis — Ladder Logic — Linux Investigation — Shodan — Metasploit & ModbusPal",
         assignment14: "Malicious PDF Analysis — Cuckoo Sandbox — IOC & YARA — Forensic & Redline",
-        contact: "📫 Contact: <a href=\"mailto:fredericperron888@hotmail.com\" style=\"color: #66ccff;\">fredericperron888@hotmail.com</a> | <a href=\"https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #66ccff;\">LinkedIn</a>"
+        contact: "📫 Contact: <a href=\"mailto:fredericperron888@hotmail.com\" style=\"color: #66ccff;\">fredericperron888@hotmail.com</a> | <a href=\"https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #66ccff;\">LinkedIn</a> | <a href=\"https://github.com/perrfred\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #66ccff;\">GitHub</a>",
+        contactTitle: "Contact",
+        contactTab: "Contact"
       },
       fr: {
         title: "Frédéric Perron - Portfolio Cybersécurité",
         name: "Frédéric Perron, B. Sc.",
         subtitle: "Baccalauréat ès Sciences, Cybersécurité, Polytechnique Montréal",
-        projectsTitle: "🔐 Projets Personnels",
+        projectsTitle: "Projets Personnels",
         project1: "Parcours/Roadmap expert en Administration Systèmes (Linux/Windows) créé par ChatGPT",
         project2: "Segmentation du Réseau Domestique pour IoT et Appareils de Sécurité",
         project3: "Générateur de Liste de Mots de Passe Ciblés",
-        assignmentsTitle: "🎓 Travaux d'École",
+        assignmentsTitle: "Travaux d'École",
+        portfolioTitle: "Portfolio",
         projectsTab: "Projets",
+        labsTitle: "Labs",
         labsTab: "Labs",
+        portfolioTab: "Portfolio",
         blogsTab: "Blogs",
         aboutTab: "À propos",
         servicesTab: "Mes Services",
         aboutTitle: "À propos",
         servicesTitle: "Mes Services",
         headlineTagline: "Consultant en préparation cybersécurité et GRC | NIST CSF & préparation aux audits |\nAide les startups à identifier et corriger les failles de sécurité | Ouvert aux opportunités d’emploi",
-        aboutText1: "Je m'appelle Frédéric Perron, diplômé en cybersécurité de Polytechnique Montréal (2025), avec une expérience en sécurité aéroportuaire à l'aéroport international d'Ottawa. Je suis passé de la sécurité physique à la cybersécurité pour me concentrer sur la protection des systèmes à grande échelle, en associant discipline opérationnelle et expertise technique.",
+        aboutText1: "Je suis Frédéric Perron, diplômé du baccalauréat en cybersécurité de Polytechnique Montréal (2025), avec une expérience en sécurité aéroportuaire à l'Aéroport international d'Ottawa. J'ai effectué la transition de la sécurité physique et aérienne vers la cybersécurité afin de me consacrer à la protection des systèmes électroniques à grande échelle, en réunissant mes deux passions : la sécurité et les technologies de l'information.",
         aboutText2: "Mon expérience couvre l'analyse réseau, le durcissement des systèmes, la modélisation des menaces, l'évaluation des vulnérabilités et la sécurité offensive et défensive. J'ai travaillé avec des outils et des environnements sur des systèmes virtualisés, des plateformes cloud et des bases de données, en appliquant des scénarios d'attaque réels pour identifier les faiblesses et mettre en place des défenses pratiques.",
         aboutText3: "J'aborde la sécurité avec un état d'esprit adverse : comprendre comment les systèmes se brisent et les concevoir pour qu'ils soient résilients. Je connais également des cadres comme NIST CSF, MITRE ATT&CK, STRIDE et COBIT, que j'utilise pour structurer les évaluations et les missions de conseil.",
         aboutText4: "Je suis particulièrement intéressé à aider les startups et les équipes non techniques à améliorer leur posture de sécurité, se préparer aux audits et construire des bases solides avant de passer à l'échelle. Consultez mes sections «projets» et «mes services» pour en savoir plus sur mes travaux et mes services de conseil.",
-        servicesText1: "J'aide les startups et les petites organisations à identifier les lacunes de sécurité, à se préparer aux audits et à mettre en œuvre des protections pragmatiques sans embaucher une équipe de sécurité à temps plein.",
-        servicesText2: "Mon focus porte sur la préparation en cybersécurité — en veillant à ce que les fondamentaux soient en place avant d'envisager des cadres comme NIST CSF ou SOC 2, selon vos préférences.",
-        servicesText3: "Je travaille généralement sur :",
-        servicesBullet1: "Revues de préparation et d'hygiène de sécurité",
-        servicesBullet2: "Analyse des écarts de cadre (NIST CSF, préparation SOC 2)",
-        servicesBullet3: "Politiques de sécurité et bases de la réponse aux incidents",
-        servicesBullet4: "Réduction des risques de phishing et sensibilisation",
-        servicesText4: "Mon approche est simple : claire, structurée et alignée sur le risque réel des entreprises — pas de complexité inutile. Rendre tout compréhensible sous un angle business pour des dirigeants non techniques est également une de mes priorités.",
-        servicesText5: "Si vous avez besoin d'aide pour comprendre votre posture de sécurité actuelle ou préparer des exigences d'audit, n'hésitez pas à me contacter par email ou sur LinkedIn, même si votre question est simple et semble basique, c'est précisément pour cela que je propose ces services.",
+        servicesText1: "J’aide les particuliers, les startups et les petites organisations à mieux comprendre leurs risques en cybersécurité, à se préparer aux audits lorsque nécessaire et à mettre en place des mesures de protection concrètes adaptées à leur réalité.",
+        servicesText2: "Mon approche est axée sur la préparation et les bonnes pratiques de base en cybersécurité. L'objectif est de s'assurer que les fondations sont solides avant d'entreprendre une démarche plus structurée, que ce soit en fonction du cadre NIST CSF, du SOC 2 ou d'autres exigences propres à votre situation.",
+        servicesText3: "J'interviens principalement dans les domaines suivants :",
+        servicesBullet1: "Évaluation de la préparation et des bonnes pratiques de sécurité",
+        servicesBullet2: "Analyse des écarts par rapport à des cadres comme NIST CSF ou en vue d'une certification SOC 2",
+        servicesBullet3: "Élaboration des bases en matière de politiques de sécurité et de gestion des incidents",
+        servicesBullet4: "Réduction des risques liés à l'hameçonnage et sensibilisation à la cybersécurité",
+        servicesText4: "Ma façon de travailler est simple : offrir des recommandations claires, structurées et adaptées aux risques réels, sans ajouter de complexité inutile. Je m'assure également de rendre les enjeux de cybersécurité compréhensibles pour les propriétaires d'entreprise, les gestionnaires et les particuliers qui n'ont pas nécessairement un profil technique.",
+        servicesText5: "Si vous souhaitez mieux comprendre votre situation actuelle en cybersécurité, renforcer vos pratiques de sécurité ou vous préparer à des exigences d'audit ou de conformité, n'hésitez pas à me contacter par courriel ou sur LinkedIn. Que vous soyez un particulier, un entrepreneur ou une organisation, je serai heureux de vous aider, même si votre question vous semble simple.",
         certificationsText: "Au cours de ma carrière, je prévois d'obtenir quelques certifications comme CCNA, Security+, CISA, AZ-500, des certifications AWS ou toute autre certification dont je pourrais avoir besoin pour un rôle spécifique.",
         certificationsTab: "Certifications",
         blogsTitle: "📝 Blogs / Articles",
-        labsTitle: "🧪 Laboratoires",
+        labsTitle: "🧪 Labs",
         blog1: "Comment j'ai amélioré la segmentation du réseau domestique",
         blog2: "Introduction au NIST CSF pour les startups",
         defensiveTitle: "🛡 Sécurité Défensive",
@@ -266,7 +366,9 @@
         assignment12: "Injection SQL — Authentification — Traversée de Répertoire — Injection de Commande OS — Vulnérabilités Logique Métier — Divulgation d'Informations — Contrôle d'Accès — Falsification de Requête Côté Serveur (SSRF) — Injection XXE — XSS (Scripting Cross-Site)",
         assignment13: "Analyse de trafic ICS — Échelle Logique — Investigation Linux — Shodan — Metasploit & ModbusPal",
         assignment14: "Analyse PDF malicieux — Sandbox Cuckoo — IOC & YARA — Forensic & Redline",
-        contact: "📫 Contact : <a href=\"mailto:fredericperron888@hotmail.com\" style=\"color: #66ccff;\">fredericperron888@hotmail.com</a> | <a href=\"https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: #66ccff;\">LinkedIn</a>"
+        contact: "📫 Contact : <a href=\"mailto:fredericperron888@hotmail.com\">fredericperron888@hotmail.com</a> | <a href=\"https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-perron-9a682124a/\" target=\"_blank\" rel=\"noopener noreferrer\">LinkedIn</a> | <a href=\"https://github.com/perrfred\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>",
+        contactTitle: "Contact",
+        contactTab: "Contact"
       }
     };
 
@@ -284,12 +386,14 @@
       // Switch logo based on language
       const logoImg = document.querySelector('.school-logo'); if (logoImg) logoImg.src = lang === 'en' ? 'PolyLogoEN.png' : 'PolyLogoFR.png';
 
-      setText('projects-title', t.projectsTitle);
+      setText('projects-label', t.projectsTitle);
       setText('project1', t.project1);
       setText('project2', t.project2);
       setText('project3-link', t.project3);
       setText('headline-tagline', t.headlineTagline);
-      setText('assignments-title', t.assignmentsTitle);
+      setText('portfolio-title', t.portfolioTitle);
+      setText('labs-label', t.labsTitle);
+      setText('assignments-label', t.assignmentsTitle);
       setText('certifications-title', t.certificationsTitle);
       setText('certifications-text', t.certificationsText);
 
@@ -303,10 +407,9 @@
       setText('defensive-title', t.defensiveTitle);
       setText('offensive-title', t.offensiveTitle);
 
-      const tabProjectsEl = document.getElementById('tab-projects'); if (tabProjectsEl) tabProjectsEl.textContent = t.projectsTab || t.workTab || 'Projects';
-      const tabLabsEl = document.getElementById('tab-labs'); if (tabLabsEl) tabLabsEl.textContent = t.labsTab || 'Labs';
+      const tabPortfolioEl = document.getElementById('tab-portfolio'); if (tabPortfolioEl) tabPortfolioEl.textContent = t.portfolioTab || 'Portfolio';
+      const tabCertificationsEl = document.getElementById('tab-certifications'); if (tabCertificationsEl) tabCertificationsEl.textContent = t.certificationsTab || 'Certifications';
       const tabBlogsEl = document.getElementById('tab-blogs'); if (tabBlogsEl) tabBlogsEl.textContent = t.blogsTab || t.blogsTitle || 'Blogs';
-      const tabCertsEl = document.getElementById('tab-certifications'); if (tabCertsEl) tabCertsEl.textContent = t.certificationsTab || t.certificationsTitle || 'Certifications';
       setText('tab-about', t.aboutTab);
       setText('tab-services', t.servicesTab);
 
@@ -319,7 +422,10 @@
       setText('services-title', t.servicesTitle);
       // services content uses static blocks; don't try to assign missing IDs
 
-      setHTML('contact', t.contact);
+      setHTML('contact-info', t.contact);
+      setText('contact-title', t.contactTitle || 'Contact');
+      const tabContact = document.getElementById('tab-contact');
+      if (tabContact) tabContact.textContent = t.contactTab || 'Contact';
 
       // Update assignment links based on language if elements exist
       const assignmentMappings = {
@@ -344,34 +450,34 @@
       }
     }
 
-    document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
-    document.getElementById('lang-fr').addEventListener('click', () => setLanguage('fr'));
+const tabPortfolio = document.getElementById('tab-portfolio');
+    const tabCertifications = document.getElementById('tab-certifications');
+    const tabBlogs = document.getElementById('tab-blogs');
+    const tabAbout = document.getElementById('tab-about');
+    const tabServices = document.getElementById('tab-services');
+    const tabContact = document.getElementById('tab-contact');
+
+    const portfolioSection = document.getElementById('portfolio-section');
+    const certificationsSection = document.getElementById('certifications-section');
+    const blogsSection = document.getElementById('blogs-section');
+    const aboutSection = document.getElementById('about-section');
+    const servicesSection = document.getElementById('services-section');
+    const contactSection = document.getElementById('contact-section');
 
     // Default to English
     setLanguage('en');
 
-    const tabProjects = document.getElementById('tab-projects');
-    const tabLabs = document.getElementById('tab-labs');
-    const tabBlogs = document.getElementById('tab-blogs');
-    const tabCerts = document.getElementById('tab-certifications');
-    const tabAbout = document.getElementById('tab-about');
-    const tabServices = document.getElementById('tab-services');
-
-    const projectsSection = document.getElementById('projects-section');
-    const labsSection = document.getElementById('labs-section');
-    const blogsSection = document.getElementById('blogs-section');
-    const certificationsSection = document.getElementById('certifications-section');
-    const aboutSection = document.getElementById('about-section');
-    const servicesSection = document.getElementById('services-section');
+    document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('lang-fr').addEventListener('click', () => setLanguage('fr'));
 
     // Unified tab show/hide to avoid edge cases
     const sectionMap = {
-      projects: projectsSection,
-      labs: labsSection,
-      blogs: blogsSection,
+      portfolio: portfolioSection,
       certifications: certificationsSection,
+      blogs: blogsSection,
       about: aboutSection,
-      services: servicesSection
+      services: servicesSection,
+      contact: contactSection
     };
 
     function hideAllSections() {
@@ -387,86 +493,60 @@
       if (tab) tab.classList.add('active');
     }
 
-    tabProjects.addEventListener('click', () => showSection('projects'));
-    if (tabLabs) tabLabs.addEventListener('click', () => showSection('labs'));
+    if (tabPortfolio) tabPortfolio.addEventListener('click', () => showSection('portfolio'));
+    if (tabCertifications) tabCertifications.addEventListener('click', () => showSection('certifications'));
     if (tabBlogs) tabBlogs.addEventListener('click', () => showSection('blogs'));
-    if (tabCerts) tabCerts.addEventListener('click', () => showSection('certifications'));
     tabAbout.addEventListener('click', () => showSection('about'));
     tabServices.addEventListener('click', () => showSection('services'));
+    if (tabContact) tabContact.addEventListener('click', () => showSection('contact'));
 
     // Default to About Me
     showSection('about');
 
-    // Set initial display states
+    // Set initial display states for Portfolio toggles
     var assignmentsListEl = document.getElementById('assignments-list'); if (assignmentsListEl) assignmentsListEl.style.display = 'block';
-    var projectsListEl = document.getElementById('projects-list'); if (projectsListEl) projectsListEl.style.display = 'none';
-    var certsListEl = document.getElementById('certifications-list'); if (certsListEl) certsListEl.style.display = 'none';
-    var certsTextEl = document.getElementById('certifications-text'); if (certsTextEl) certsTextEl.style.display = 'block';
+    var projectsListEl = document.getElementById('projects-list'); if (projectsListEl) projectsListEl.style.display = 'block';
+    var labsContentEl = document.getElementById('labs-content'); if (labsContentEl) labsContentEl.style.display = 'none';
 
     // Add dropdown functionality
       // toggle helper used by onclicks and fallback listeners
-      window.toggleList = function(listId, titleId) {
+      window.toggleSection = function(sectionId, clickedElement) {
         try {
-          var list = document.getElementById(listId);
-          var title = document.getElementById(titleId);
-          if (!list) return;
-          if (list.style.display === 'none' || list.style.display === '') {
-            list.style.display = 'block';
+          var section = document.getElementById(sectionId);
+          if (!section) return;
+
+          var arrow = null;
+          if (clickedElement && clickedElement.tagName === 'BUTTON' && clickedElement.classList.contains('toggle-arrow')) {
+            arrow = clickedElement;
+          } else if (clickedElement && clickedElement.querySelector) {
+            arrow = clickedElement.querySelector('.toggle-arrow');
+          }
+          var title = arrow ? arrow.closest('.toggle-title') : (clickedElement && clickedElement.classList.contains('toggle-title') ? clickedElement : null);
+
+          var isHidden = section.style.display === 'none' || section.style.display === '';
+          if (isHidden) {
+            section.style.display = 'block';
             if (title) title.classList.add('expanded');
+            if (arrow) {
+              arrow.classList.add('expanded');
+              arrow.setAttribute('aria-expanded', 'true');
+              arrow.textContent = '▾';
+            }
           } else {
-            list.style.display = 'none';
+            section.style.display = 'none';
             if (title) title.classList.remove('expanded');
+            if (arrow) {
+              arrow.classList.remove('expanded');
+              arrow.setAttribute('aria-expanded', 'false');
+              arrow.textContent = '▸';
+            }
           }
         } catch (e) { /* noop */ }
       };
 
       // helper for certifications to also toggle the descriptive text
-      window.toggleCertifications = function() {
-        try {
-          toggleList('certifications-list','certifications-title');
-          var text = document.getElementById('certifications-text');
-          if (!text) return;
-          text.style.display = (text.style.display === 'none' || text.style.display === '') ? 'block' : 'none';
-        } catch (e) {}
-      };
-
+      // (certifications are now a top-level tab section, no accordion needed)
       // (removed duplicate fallback listeners) Projects-specific toggles attached below
-
-    // Ensure Projects-specific toggles are robust (EN/FR titles)
-    (function attachProjectsToggles(){
-      try {
-        var pTitle = document.getElementById('projects-title');
-        var aTitle = document.getElementById('assignments-title');
-        var cTitle = document.getElementById('certifications-title');
-
-        function ensureToggle(titleEl, listId) {
-          if (!titleEl) return;
-          titleEl.style.cursor = 'pointer';
-          titleEl.addEventListener('click', function(e){
-            e.stopPropagation();
-            var list = document.getElementById(listId);
-            if (!list) return;
-            // toggle display
-            if (list.style.display === 'none' || list.style.display === '') {
-              list.style.display = 'block';
-              titleEl.classList.add('expanded');
-              if (listId === 'certifications-list') {
-                var certText = document.getElementById('certifications-text'); if (certText) certText.style.display = 'block';
-              }
-            } else {
-              list.style.display = 'none';
-              titleEl.classList.remove('expanded');
-              if (listId === 'certifications-list') {
-                var certText = document.getElementById('certifications-text'); if (certText) certText.style.display = 'none';
-              }
-            }
-          });
-        }
-
-        ensureToggle(pTitle, 'projects-list');
-        ensureToggle(aTitle, 'assignments-list');
-      } catch (e) { /* noop */ }
-    })();
 
     // Blogs section is a simple list (no dropdown)
   </script>

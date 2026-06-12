@@ -267,9 +267,9 @@ h1 {
   transition: all 0.3s ease;
 }
 
-.section-card:not(#certifications-section):not(#about-section):not(#services-section):hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+.section-card:not(.no-lift):not(#certifications-section):not(#about-section):not(#services-section):not(#labs-section):not(#blogs-section):hover {
+  transform: none;
+  box-shadow: var(--card-shadow);
 }
 
 h2 {
@@ -283,11 +283,67 @@ h2 {
   transition: color 0.3s ease;
 }
 
+#portfolio-title {
+  cursor: default;
+}
+
+#portfolio-title::before {
+  content: none;
+}
+
+.toggle-title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-title::before {
+  content: none;
+}
+
 h3 {
   margin: 1.2em 0 10px 0;
   color: var(--h2-color);
   font-size: 1.1em;
   font-weight: 600;
+}
+
+.toggle-title {
+  margin-bottom: 0.85em;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.toggle-label {
+  display: inline-block;
+}
+
+.toggle-arrow {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--h2-color);
+  font-size: 1.1em;
+  line-height: 1;
+  padding: 0;
+  width: 1.4rem;
+  min-width: 1.4rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.toggle-arrow:hover {
+  color: var(--h2-hover);
+}
+
+.toggle-arrow.expanded {
+  transform: none;
+}
+
+.toggle-title.expanded .toggle-arrow {
+  transform: none;
 }
 
 h2:hover {
