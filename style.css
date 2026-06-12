@@ -442,19 +442,78 @@ a:hover {
 }
 
 .contact-info {
-  margin: 0;
-  font-size: 1.2em;
-  font-weight: 500;
+  margin: 0 auto;
+  max-width: 820px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 24px;
+  border-radius: 18px;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  color: var(--contact-text);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.contact-card-icon {
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1.4rem;
+}
+
+.contact-card-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.contact-card-text {
+  display: block;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.3;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .contact-card-text {
+    white-space: normal;
+  }
+}
+
+.contact-card:hover .contact-card-text {
+  color: rgba(255, 255, 255, 0.98);
 }
 
 .contact-info a {
-  color: var(--contact-text);
-  text-decoration: underline;
+  color: inherit;
+  text-decoration: none;
 }
 
 .contact-info a:hover {
-  color: #f0f0f0;
-  text-decoration: none;
+  color: var(--link-hover);
 }
 
 /* Theme Switch */
