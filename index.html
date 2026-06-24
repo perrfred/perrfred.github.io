@@ -20,7 +20,8 @@
           <p id="subtitle-en">Bachelor of Science, Cybersecurity, Polytechnique Montreal</p>
           <p id="subtitle-fr">Baccalauréat ès Sciences, Cybersécurité, Polytechnique Montréal</p>
           <div class="subtitle-divider"></div>
-          <p id="headline-tagline">Cybersecurity Readiness Consultant | NIST CSF & Audit Prep | Helping Startups Identify & Fix Security Gaps | Open to Work</p>
+          <p id="headline-tagline-en">Cybersecurity Professional | Helping Startups & Individuals Identify and Address Security Gaps | Open to Work — IT & Cybersecurity Opportunities</p>
+          <p id="headline-tagline-fr">Professionnel en Cybersécurité | J'accompagne les startups et les particuliers dans l'identification et la réduction des risques de sécurité | Ouvert aux opportunités en TI et cybersécurité</p>
         </div>
         <img src="PolyLogoEN.png" alt="Polytechnique Montreal Logo" class="school-logo" />
       </div>
@@ -388,7 +389,8 @@
       setText('project1', t.project1);
       setText('project2', t.project2);
       setText('project3-link', t.project3);
-      setText('headline-tagline', t.headlineTagline);
+      const taglineEn = document.getElementById('headline-tagline-en'); if (taglineEn) taglineEn.style.display = lang === 'en' ? 'block' : 'none';
+      const taglineFr = document.getElementById('headline-tagline-fr'); if (taglineFr) taglineFr.style.display = lang === 'fr' ? 'block' : 'none';
       setText('portfolio-title', t.portfolioTitle);
       setText('labs-label', t.labsTitle);
       setText('assignments-label', t.assignmentsTitle);
