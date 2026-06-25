@@ -596,6 +596,25 @@ a:hover {
     padding: 20px;
   }
 
+  .language-selector {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tab-selector {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 0;
+  }
+
+  .tab-button {
+    flex: 1 1 180px;
+    min-width: 140px;
+    padding: 10px 14px;
+  }
+
   h1 {
     font-size: 2.2em;
   }
@@ -605,8 +624,12 @@ a:hover {
     gap: 15px;
   }
 
+  .subtitle-text {
+    max-width: 100%;
+  }
+
   .school-logo {
-    width: 100px;
+    width: 120px;
   }
 
   .section-card {
@@ -615,5 +638,84 @@ a:hover {
 
   h2 {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    background-attachment: scroll;
+  }
+
+  .content {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .language-selector {
+    padding: 12px;
+  }
+
+  .about-content {
+    gap: 18px;
+  }
+
+  .about-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .subtitle-text p,
+  .about-text p,
+  .services-list,
+  .contact-card-text {
+    font-size: 0.96em;
+  }
+
+  .tab-button {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .section-card {
+    padding: 18px;
+  }
+
+  .header-section {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    margin: 8px;
+    padding: 14px;
+  }
+
+  .header-section {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 1.9em;
+  }
+
+  .subtitle-text p,
+  .about-text p,
+  .services-list,
+  .contact-card-text,
+  .tab-button {
+    font-size: 0.95em;
+  }
+
+  .tab-selector {
+    gap: 8px;
+  }
+
+  .tab-button {
+    padding: 10px 12px;
+  }
+
+  .school-logo {
+    width: 100px;
   }
 }
