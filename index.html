@@ -46,6 +46,12 @@
               <span id="projects-label" class="toggle-label">Projects / Projets Personnels</span>
             </h3>
             <ul id="projects-list" style="display: block;">
+              <li id="project4">
+                <a href="https://github.com/perrfred/internet-honeypot-soc-lab"
+                   target="_blank" rel="noopener noreferrer" id="project4-link">
+                  Internet Honeypot SOC Lab
+                </a>
+              </li>
               <li id="project2">Home Network Segmentation for IoT & Security Devices</li>
               <li id="project3">
                 <a href="https://github.com/perrfred/educational-targeted-pwgen"
@@ -253,6 +259,7 @@
         project1: "SysAdmin Expert Roadmap (Linux & Windows) created by ChatGPT",
         project2: "Home Network Segmentation for IoT & Security Devices",
         project3: "Targeted Password List Generator for Educational and Testing purposes",
+        project4: "Internet Honeypot SOC Lab",
         portfolioTitle: "Portfolio",
         assignmentsTitle: "School Assignments",
         projectsTab: "Projects",
@@ -317,6 +324,7 @@
         project1: "Parcours/Roadmap expert en Administration Systèmes (Linux/Windows) créé par ChatGPT",
         project2: "Segmentation du Réseau Domestique pour IoT et Appareils de Sécurité",
         project3: "Générateur de Liste de Mots de Passe Ciblés",
+        project4: "Internet Honeypot SOC Lab",
         assignmentsTitle: "Travaux d'École",
         portfolioTitle: "Portfolio",
         projectsTab: "Projets",
@@ -389,6 +397,7 @@
       setText('project1', t.project1);
       setText('project2', t.project2);
       setText('project3-link', t.project3);
+      setText('project4-link', t.project4);
       const taglineEn = document.getElementById('headline-tagline-en'); if (taglineEn) taglineEn.style.display = lang === 'en' ? 'block' : 'none';
       const taglineFr = document.getElementById('headline-tagline-fr'); if (taglineFr) taglineFr.style.display = lang === 'fr' ? 'block' : 'none';
       setText('portfolio-title', t.portfolioTitle);
