@@ -31,7 +31,6 @@
       <button id="tab-about" class="tab-button active" onclick="showSection('about')">About Me</button>
       <button id="tab-portfolio" class="tab-button" onclick="showSection('portfolio')">Portfolio</button>
       <button id="tab-certifications" class="tab-button" onclick="showSection('certifications')">Certifications</button>
-      <button id="tab-blogs" class="tab-button" onclick="showSection('blogs')">Blogs</button>
       <button id="tab-services" class="tab-button" onclick="showSection('services')">My Services</button>
       <button id="tab-contact" class="tab-button" onclick="showSection('contact')">Contact</button>
     </div>
@@ -104,15 +103,6 @@
 
     <div id="certifications-section" class="section-card" style="display: none;">
       <h2 id="certifications-title" class="static-title">Certifications</h2>
-      <div class="about-text">
-        <p id="certifications-text">During my career, I plan on acquiring a few certifications like CCNA, Security+, CISA, AZ-500, AWS certifications or any other certification I could need for a specific role.</p>
-      </div>
-    </div>
-
-    <div id="blogs-section" class="section-card" style="display: none;">
-      <ul class="services-list">
-        <li>SysAdmin Expert Roadmap (Linux & Windows) created by ChatGPT</li>
-      </ul>
     </div>
 
     <div id="contact-section" class="section-card" style="display: none;">
@@ -266,7 +256,6 @@
         labsTitle: "Labs",
         labsTab: "Labs",
         portfolioTab: "Portfolio",
-        blogsTab: "Blogs",
         aboutTab: "About Me",
         servicesTab: "My Services",
         aboutTitle: "About Me",
@@ -289,11 +278,7 @@
         servicesBullet4: "Phishing risk reduction and awareness",
         servicesText4: "My approach is simple: clear, structured, and aligned with real business risk — not unnecessary complexity. Making everything understandable from a business view to non-technical business owners is also one of my priority during my services.",
         servicesText5: "If you need help understanding your current security posture or preparing for audit requirements, feel free to reach out by email or on LinkedIn, even if your question is simple and seems basic, that's what my services are for.",
-        certificationsText: "During my career, I plan on acquiring a few certifications like CCNA, Security+, CISA, AZ-500, AWS certifications or any other certification I could need for a specific role.",
         certificationsTab: "Certifications",
-        blogsTitle: "📝 Blogs / Articles",
-        blog1: "How I improved home network segmentation",
-        blog2: "Intro to NIST CSF for Startups",
         labsTab: "Labs",
         defensiveTitle: "🛡 Defensive Security",
         offensiveTitle: "⚔ Offensive Security",
@@ -331,7 +316,6 @@
         labsTitle: "Labs",
         labsTab: "Labs",
         portfolioTab: "Portfolio",
-        blogsTab: "Blogs",
         aboutTab: "À propos",
         servicesTab: "Mes Services",
         aboutTitle: "À propos",
@@ -350,12 +334,8 @@
         servicesBullet4: "Réduction des risques liés à l'hameçonnage et sensibilisation à la cybersécurité",
         servicesText4: "Ma façon de travailler est simple : offrir des recommandations claires, structurées et adaptées aux risques réels, sans ajouter de complexité inutile. Je m'assure également de rendre les enjeux de cybersécurité compréhensibles pour les propriétaires d'entreprise, les gestionnaires et les particuliers qui n'ont pas nécessairement un profil technique.",
         servicesText5: "Si vous souhaitez mieux comprendre votre situation actuelle en cybersécurité, renforcer vos pratiques de sécurité ou vous préparer à des exigences d'audit ou de conformité, n'hésitez pas à me contacter par courriel ou sur LinkedIn. Que vous soyez un particulier, un entrepreneur ou une organisation, je serai heureux de vous aider, même si votre question vous semble simple.",
-        certificationsText: "Au cours de ma carrière, je prévois d'obtenir quelques certifications comme CCNA, Security+, CISA, AZ-500, des certifications AWS ou toute autre certification dont je pourrais avoir besoin pour un rôle spécifique.",
         certificationsTab: "Certifications",
-        blogsTitle: "📝 Blogs / Articles",
         labsTitle: "🧪 Labs",
-        blog1: "Comment j'ai amélioré la segmentation du réseau domestique",
-        blog2: "Introduction au NIST CSF pour les startups",
         defensiveTitle: "🛡 Sécurité Défensive",
         offensiveTitle: "⚔ Sécurité Offensive",
         certificationsTitle: "🏆 Certifications",
@@ -404,7 +384,6 @@
       setText('labs-label', t.labsTitle);
       setText('assignments-label', t.assignmentsTitle);
       setText('certifications-title', t.certificationsTitle);
-      setText('certifications-text', t.certificationsText);
 
       // Toggle static services blocks based on language
       const servicesEn = document.querySelector('.services-en'); if (servicesEn) servicesEn.style.display = lang === 'en' ? 'block' : 'none';
@@ -418,7 +397,6 @@
 
       const tabPortfolioEl = document.getElementById('tab-portfolio'); if (tabPortfolioEl) tabPortfolioEl.textContent = t.portfolioTab || 'Portfolio';
       const tabCertificationsEl = document.getElementById('tab-certifications'); if (tabCertificationsEl) tabCertificationsEl.textContent = t.certificationsTab || 'Certifications';
-      const tabBlogsEl = document.getElementById('tab-blogs'); if (tabBlogsEl) tabBlogsEl.textContent = t.blogsTab || t.blogsTitle || 'Blogs';
       setText('tab-about', t.aboutTab);
       setText('tab-services', t.servicesTab);
 
@@ -461,14 +439,12 @@
 
 const tabPortfolio = document.getElementById('tab-portfolio');
     const tabCertifications = document.getElementById('tab-certifications');
-    const tabBlogs = document.getElementById('tab-blogs');
     const tabAbout = document.getElementById('tab-about');
     const tabServices = document.getElementById('tab-services');
     const tabContact = document.getElementById('tab-contact');
 
     const portfolioSection = document.getElementById('portfolio-section');
     const certificationsSection = document.getElementById('certifications-section');
-    const blogsSection = document.getElementById('blogs-section');
     const aboutSection = document.getElementById('about-section');
     const servicesSection = document.getElementById('services-section');
     const contactSection = document.getElementById('contact-section');
@@ -483,7 +459,6 @@ const tabPortfolio = document.getElementById('tab-portfolio');
     const sectionMap = {
       portfolio: portfolioSection,
       certifications: certificationsSection,
-      blogs: blogsSection,
       about: aboutSection,
       services: servicesSection,
       contact: contactSection
@@ -504,7 +479,6 @@ const tabPortfolio = document.getElementById('tab-portfolio');
 
     if (tabPortfolio) tabPortfolio.addEventListener('click', () => showSection('portfolio'));
     if (tabCertifications) tabCertifications.addEventListener('click', () => showSection('certifications'));
-    if (tabBlogs) tabBlogs.addEventListener('click', () => showSection('blogs'));
     tabAbout.addEventListener('click', () => showSection('about'));
     tabServices.addEventListener('click', () => showSection('services'));
     if (tabContact) tabContact.addEventListener('click', () => showSection('contact'));
@@ -556,8 +530,6 @@ const tabPortfolio = document.getElementById('tab-portfolio');
       // helper for certifications to also toggle the descriptive text
       // (certifications are now a top-level tab section, no accordion needed)
       // (removed duplicate fallback listeners) Projects-specific toggles attached below
-
-    // Blogs section is a simple list (no dropdown)
   </script>
 </body>
 </html>
