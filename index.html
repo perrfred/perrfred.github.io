@@ -103,6 +103,23 @@
 
     <div id="certifications-section" class="section-card" style="display: none;">
       <h2 id="certifications-title" class="static-title">Certifications</h2>
+      <p id="certifications-intro" class="certifications-intro">Selected credentials and academic achievements.</p>
+      <div class="certifications-grid">
+        <article class="certification-card">
+          <img src="BACCprinted.png" alt="Bachelor diploma certificate" class="certificate-image" />
+          <div class="certificate-caption">
+            <h3 id="certification-diploma-title">Bachelor of Science — Cybersecurity</h3>
+            <p id="certification-diploma-subtitle">Polytechnique Montréal</p>
+          </div>
+        </article>
+        <article class="certification-card">
+          <img src="KibanaFundamentalsCert.PNG" alt="Kibana Fundamentals certificate" class="certificate-image" />
+          <div class="certificate-caption">
+            <h3 id="certification-kibana-title">Kibana Fundamentals</h3>
+            <p id="certification-kibana-subtitle">Elastic / Kibana training certificate</p>
+          </div>
+        </article>
+      </div>
     </div>
 
     <div id="contact-section" class="section-card" style="display: none;">
@@ -126,7 +143,7 @@
     <!-- removed duplicate labs/blogs section (moved earlier) -->
 
     <div id="services-section" class="section-card" style="display: none;">
-      <h2 id="services-title" class="static-title">My Services / Mes Services</h2>
+      <h2 id="services-title" class="static-title">Services</h2>
       <div class="about-text">
         <div class="services-en" style="display: block;">
           <h3>Who I Work With</h3>
@@ -301,9 +318,9 @@
         labsTab: "Labs",
         portfolioTab: "Portfolio",
         aboutTab: "About Me",
-        servicesTab: "My Services",
+        servicesTab: "Services",
         aboutTitle: "About Me",
-        servicesTitle: "My Services",
+        servicesTitle: "Services",
         headlineTagline: "Cybersecurity Readiness & GRC Consultant | NIST CSF & Audit Prep |\nHelping Startups Identify & Fix Security Gaps | Open to Work",
         aboutText1: "I’m Frédéric Perron, a cybersecurity bachelor graduate from Polytechnique Montréal (2025) with a background in aviation security at Ottawa International Airport. I transitioned from physical/aviation security to cybersecurity to focus on protecting systems at scale—combining both my passions; security and technology/computers.",
 
@@ -323,6 +340,11 @@
         servicesText4: "My approach is simple: clear, structured, and aligned with real business risk — not unnecessary complexity. Making everything understandable from a business view to non-technical business owners is also one of my priority during my services.",
         servicesText5: "If you need help understanding your current security posture or preparing for audit requirements, feel free to reach out by email or on LinkedIn, even if your question is simple and seems basic, that's what my services are for.",
         certificationsTab: "Certifications",
+        certificationsIntro: "Selected credentials and academic achievements.",
+        certificationDiplomaTitle: "Bachelor of Science — Cybersecurity",
+        certificationDiplomaSubtitle: "Polytechnique Montréal",
+        certificationKibanaTitle: "Kibana Fundamentals",
+        certificationKibanaSubtitle: "Elastic / Kibana training certificate",
         labsTab: "Labs",
         defensiveTitle: "🛡 Defensive Security",
         offensiveTitle: "⚔ Offensive Security",
@@ -361,9 +383,9 @@
         labsTab: "Labs",
         portfolioTab: "Portfolio",
         aboutTab: "À propos",
-        servicesTab: "Mes Services",
+        servicesTab: "Services",
         aboutTitle: "À propos",
-        servicesTitle: "Mes Services",
+        servicesTitle: "Services",
         headlineTagline: "Consultant en préparation cybersécurité et GRC | NIST CSF & préparation aux audits |\nAide les startups à identifier et corriger les failles de sécurité | Ouvert aux opportunités d’emploi",
         aboutText1: "Je suis Frédéric Perron, diplômé du baccalauréat en cybersécurité de Polytechnique Montréal (2025), avec une expérience en sécurité aéroportuaire à l'Aéroport international d'Ottawa. J'ai effectué la transition de la sécurité physique et aérienne vers la cybersécurité afin de me consacrer à la protection des systèmes électroniques à grande échelle, en réunissant mes deux passions : la sécurité et les technologies de l'information.",
         aboutText2: "Mon expérience couvre l'analyse réseau, le durcissement des systèmes, la modélisation des menaces, l'évaluation des vulnérabilités et la sécurité offensive et défensive. J'ai travaillé avec des outils et des environnements sur des systèmes virtualisés, des plateformes cloud et des bases de données, en appliquant des scénarios d'attaque réels pour identifier les faiblesses et mettre en place des défenses pratiques.",
@@ -379,6 +401,11 @@
         servicesText4: "Ma façon de travailler est simple : offrir des recommandations claires, structurées et adaptées aux risques réels, sans ajouter de complexité inutile. Je m'assure également de rendre les enjeux de cybersécurité compréhensibles pour les propriétaires d'entreprise, les gestionnaires et les particuliers qui n'ont pas nécessairement un profil technique.",
         servicesText5: "Si vous souhaitez mieux comprendre votre situation actuelle en cybersécurité, renforcer vos pratiques de sécurité ou vous préparer à des exigences d'audit ou de conformité, n'hésitez pas à me contacter par courriel ou sur LinkedIn. Que vous soyez un particulier, un entrepreneur ou une organisation, je serai heureux de vous aider, même si votre question vous semble simple.",
         certificationsTab: "Certifications",
+        certificationsIntro: "Certifications et réalisations académiques sélectionnées.",
+        certificationDiplomaTitle: "Baccalauréat en sciences — Cybersécurité",
+        certificationDiplomaSubtitle: "Polytechnique Montréal",
+        certificationKibanaTitle: "Kibana Fundamentals",
+        certificationKibanaSubtitle: "Certification de formation Elastic / Kibana",
         labsTitle: "🧪 Labs",
         defensiveTitle: "🛡 Sécurité Défensive",
         offensiveTitle: "⚔ Sécurité Offensive",
@@ -428,6 +455,11 @@
       setText('labs-label', t.labsTitle);
       setText('assignments-label', t.assignmentsTitle);
       setText('certifications-title', t.certificationsTitle);
+      setText('certifications-intro', t.certificationsIntro || '');
+      setText('certification-diploma-title', t.certificationDiplomaTitle || '');
+      setText('certification-diploma-subtitle', t.certificationDiplomaSubtitle || '');
+      setText('certification-kibana-title', t.certificationKibanaTitle || '');
+      setText('certification-kibana-subtitle', t.certificationKibanaSubtitle || '');
 
       // Toggle static services blocks based on language
       const servicesEn = document.querySelector('.services-en'); if (servicesEn) servicesEn.style.display = lang === 'en' ? 'block' : 'none';
